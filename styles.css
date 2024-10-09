@@ -5,17 +5,26 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #fdf4e3;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f8b195, #f67280, #c06c84);
   }
   
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
     align-items: center;
+    position: relative;
   }
   
   .top-left-flower {
@@ -24,11 +33,13 @@
     position: absolute;
     top: 10px;
     left: 10px;
+    z-index: 2;
   }
   
   .flower-img {
     max-width: 150px;
     transform: rotate(-45deg); /* Imagen en rombo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .left-container {
@@ -39,12 +50,15 @@
   
   .title {
     font-size: 5em;
-    color: #a0522d;
+    color: #fff;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
   
   .subtitle {
     font-size: 1.5em;
-    color: #a0522d;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   }
   
   .right-container {
@@ -58,21 +72,28 @@
   .collage {
     max-width: 80%;
     height: auto;
-    
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
   
   .glow-button {
     grid-column: 1 / 3;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 15px 40px;
+    font-size: 1.5em;
     background-color: #ff69b4;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     color: white;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.5);
+    transition: transform 0.2s ease;
+  }
+  
+  .glow-button:hover {
+    transform: scale(1.1);
   }
   
   .glow-button::before {
@@ -82,8 +103,8 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 0, 255, 0.4), rgba(0, 0, 0, 0));
-    animation: rotate 2s linear infinite;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0));
+    animation: rotate 3s linear infinite;
   }
   
   @keyframes rotate {
@@ -101,7 +122,77 @@
     }
   
     .glow-button {
+      font-size: 1.2em;
+      padding: 10px 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2.5em;
+    }
+  
+    .collage {
+      max-width: 100%;
+    }
+  
+    .glow-button {
       font-size: 1em;
       padding: 10px 20px;
     }
-  }  
+
+  }
+  .glow-button {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 1.5em;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.5);
+    transition: transform 0.2s ease;
+  }
+  
+  .glow-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .glow-button::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #ff69b4, #ff1493);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit 3s linear infinite;
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(100px);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(100px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .glow-button {
+      font-size: 1.2em;
+      padding: 10px 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .glow-button {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  }
