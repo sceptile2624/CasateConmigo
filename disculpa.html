@@ -4,11 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disculpa</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      font-size: 3rem;
+      color: #ff6b6b;
+      margin-bottom: 20px;
+    }
+
+    .image-text {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .images {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .images img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .images img:hover {
+      transform: scale(1.05);
+    }
+
+    .text {
+      flex: 1;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .text p {
+      margin-bottom: 15px;
+    }
+
+    .video {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .image-text {
+        flex-direction: column;
+      }
+
+      .text {
+        text-align: center;
+      }
+
+      iframe {
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .text p {
+        font-size: 1rem;
+      }
+
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Aqui diré todo lo que deseo decir </h1>
+    <h1>Aquí diré todo lo que deseo decir</h1>
     <div class="image-text">
       <div class="images">
         <img src="image1.jpg" alt="Imagen 1">
@@ -17,29 +130,23 @@
       </div>
       <div class="text">
         <p>Gracias por estar en mi vida. Nunca imaginé que podría conocer a alguien como tú...</p>
-        <p>Sé que no suelo decir lo siento, y que ayer mi comportamiento no fue el adecuado, quiza quise forzarte a decir algo que no querias o simplemente no lo sé</p>
-        <p>Lo que si sé es que ayer nunca había sentido algo asi, y lamento haberte causado problemas; tampoco soy un cobarde que no reconce sus errores y le de miedo cambiar
-            simplemente quiero que seas con quien comparte mis logros y junto a ti me veras ser un buen Desarrollador, esa es mi meta quiero crecer contigo y formar una familia contigo.
-        </p>
-        <p>Te hice llorar ayer te hice sentir mal y me odio en estos momentos por eso, quizas las cosas puede parecer que van para mal, no van como yo crei pero estaremos bien
-            , la disculpa no compensara pues mis errores no repararán, solo no me tengas nunca lastima ni compasión; y si buscando lo que he querido he ido a encontror y yo que no era 
-            mi ideal, he sido egoista y te he podido dañar; y a lo mejor no soy mucho de dar regalos y la unica manera que conozco de expresar mis
-            sentir es programando y haciendo estos pequeños detalles, estaré contando los minutos y las horas para volver a verte. 
-        </p>
-        <p>No lo tomes a mal pero te subestimas demasiado y tus miedos no te dejan ver lo que hay frente</p>
-        <p>Eres una mujer marivillosa, hermosa y gentil.</p>
-        <p>Ya sea por la razon que sea tu y yo nos encontramos y me enamoré, simplemente agradezco a dios, a todos los dioses existidos y por haber por el simple hecho de haberte conocido</p>
-        <p>Eres lo que quería algo genuino, alguien para mi, por eso te pido una vez mas y yo no miraré hacia atras, no me asusta que venga a futuro si te tengo a ti</p>
-        <p>Casate conmigo</p>
-        <!-- Añade más texto aquí -->
+        <p>Sé que no suelo decir lo siento, y que ayer mi comportamiento no fue el adecuado, quizá quise forzarte a decir algo que no querías o simplemente no lo sé.</p>
+        <p>Lo que sí sé es que ayer nunca había sentido algo así, y lamento haberte causado problemas; tampoco soy un cobarde que no reconoce sus errores y le tiene miedo a cambiar. Simplemente quiero que seas con quien comparta mis logros, y junto a ti me verás ser un buen desarrollador. Esa es mi meta: quiero crecer contigo y formar una familia contigo.</p>
+        <p>Te hice llorar ayer, te hice sentir mal, y me odio en estos momentos por eso. Quizás las cosas pueden parecer que van para mal, no van como yo creí, pero estaremos bien. La disculpa no compensará pues mis errores no repararán. Solo no me tengas nunca lástima ni compasión; y si buscando lo que he querido he ido a encontrar lo que no era mi ideal, he sido egoísta y te he podido dañar. Y a lo mejor no soy mucho de dar regalos, y la única manera que conozco de expresar mis sentimientos es programando y haciendo estos pequeños detalles. Estaré contando los minutos y las horas para volver a verte.</p>
+        <p>No lo tomes a mal, pero te subestimas demasiado y tus miedos no te dejan ver lo que hay frente a ti.</p>
+        <p>Eres una mujer maravillosa, hermosa y gentil.</p>
+        <p>Ya sea por la razón que sea, tú y yo nos encontramos y me enamoré. Simplemente agradezco a Dios, a todos los dioses existidos y por haber, por el simple hecho de haberte conocido.</p>
+        <p>Eres lo que quería, algo genuino, alguien para mí. Por eso te pido una vez más, y yo no miraré hacia atrás. No me asusta lo que venga en el futuro si te tengo a ti.</p>
+        <p>Cásate conmigo.</p>
       </div>
+      
     </div>
 
     <!-- Video incrustado desde YouTube -->
     <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/4DVgWmqjT7c?autoplay=1"
+        <iframe src="https://www.youtube.com/embed/4DVgWmqjT7c?autoplay=1"
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen></iframe>
+        allowfullscreen></iframe>
     </div>
   </div>
 
@@ -50,4 +157,3 @@
   </script>
 </body>
 </html>
-
